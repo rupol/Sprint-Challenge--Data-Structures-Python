@@ -9,7 +9,7 @@ class RingBuffer:
         # if length is at capacity, set item to the item at index (0 at first)
         if len(self.storage) >= self.capacity:
             self.storage[self.index] = item
-        # add element to front
+        # if length is below capacity, simply add element to back
         else:
             self.storage.append(item)
         # set index
